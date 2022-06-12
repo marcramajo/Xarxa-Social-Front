@@ -22,7 +22,6 @@
 					{
 						crossdomain: true,
 						contentType: 'application/json',
-						data: JSON.stringify(obj),
 						dataType: 'json',
 						statusCode: {
 							200: function (xhr) {
@@ -34,7 +33,7 @@
 							}
 						},
 						processData: false,
-						type: 'POST',
+						type: 'GET',
 						url: url
 					}
 				)
