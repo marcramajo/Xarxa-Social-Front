@@ -17,7 +17,6 @@
 		$(document).ready(function () {
 		
 				var url = "http://45.146.253.239:3000/get";
-				const obj = { email: email, password: passwd, name: name };
 	
 				$.ajax(
 					{
@@ -27,6 +26,7 @@
 						dataType: 'json',
 						statusCode: {
 							200: function (xhr) {
+                                console.log(xhr);
 								$("p").add(xhr);
 							},
 							409: function (xhr) {
