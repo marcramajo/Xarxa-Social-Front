@@ -107,13 +107,13 @@
 						contentType: 'application/json',
 						data: JSON.stringify(obj),
 						dataType: 'json',
-						success: function (data) {
-							app.log("device control succeeded");
-							alert("ok");
-						},
-						error: function () {
-							app.log("Device control failed");
-							alert("ERROR");
+						statusCode: {
+							200: function (xhr) {
+								window.location.replace("http://www.45.146.253.239/logIn.html");
+							},
+							409: function (xhr) {
+								alert("INVALID REGISTER.");
+							}
 						},
 						processData: false,
 						type: 'POST',
